@@ -10,9 +10,6 @@ var {User} = require('./models/user');
 
 var app = express();
 const port = process.env.PORT || 3000;
-app.get('/favicon.ico', (req, res) =>{
-    res.status(204);
-});
 app.use(bodyParser.json());
 app.post('/todos',(req,res) => {
   var todo = new Todo({
